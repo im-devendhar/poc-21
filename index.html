@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>POC 21</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #ff6a00, #ee0979);
+            color: white;
+            text-align: center;
+        }
+
+        .container {
+            margin-top: 150px;
+        }
+
+        h1 {
+            font-size: 50px;
+            animation: fadeIn 2s ease;
+        }
+
+        p {
+            font-size: 20px;
+            margin-top: 20px;
+            animation: slideUp 1.5s ease;
+        }
+
+        button {
+            padding: 15px 30px;
+            margin-top: 30px;
+            background-color: #ffffff;
+            color: #ee0979;
+            border: none;
+            font-size: 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: #ffeb3b;
+            color: #000;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-30px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+	    <h1> POC 21!</h1>
+        <p>This simple static website is running inside a Docker container on an EC2 instance.
+For metrics collection and visualization, the environment is integrated with Prometheus and Grafana, which monitor the container and EC2 performance in real time.</p>
+        <button onclick="alert('Thanks for visiting!')">Click Me</button>
+    </div>
+
+</body>
+</html>
